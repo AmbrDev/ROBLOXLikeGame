@@ -160,7 +160,7 @@
                 ballMesh.position.x += stepX;
                 ballMesh.position.y += stepY;
 
-                // Update ball rotation.
+                /* Update ball rotation.
                 var tempMat = new THREE.Matrix4();
                 tempMat.makeRotationAxis(new THREE.Vector3(0,1,0), stepX/ballRadius);
                 tempMat.multiplySelf(ballMesh.matrix);
@@ -170,11 +170,11 @@
                 tempMat.multiplySelf(ballMesh.matrix);
                 ballMesh.matrix = tempMat;
                 ballMesh.rotation.getRotationFromMatrix(ballMesh.matrix);
-                
+                */
                 // Update camera and light positions.
                 camera.position.x += (ballMesh.position.x - camera.position.x) * 0.1;
                 camera.position.y += (ballMesh.position.y - camera.position.y) * 0.1;
-                camera.position.z += (5 - camera.position.z) * 0.1;
+                camera.position.z += (10) * 0.1;
                 light.position.x = camera.position.x;
                 light.position.y = camera.position.y;
                 light.position.z = camera.position.z - 3.7;
